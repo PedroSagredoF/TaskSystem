@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ps.task.controller.IndexController">
+
+   <children>
+      <Label layoutX="247.0" layoutY="45.0" prefHeight="23.0" prefWidth="113.0" text="Task System" textAlignment="CENTER">
+         <font>
+            <Font name="Droid Sans Bold" size="18.0" />
+         </font></Label>
+      <TableView fx:id="tableView" layoutX="236.0" layoutY="91.0" onMouseClicked="#showTaskForm" prefHeight="200.0" prefWidth="334.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="taskColumn" prefWidth="138.0" text="Task" />
+            <TableColumn fx:id="ownerColumn" prefWidth="95.0" text="Owner" />
+            <TableColumn fx:id="statusColumn" prefWidth="86.0" text="Status" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="17.0" layoutY="91.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="22.0" layoutY="26.0" prefHeight="23.0" prefWidth="46.0" text="Task " textFill="#4a64cd">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font></Label>
+            <Label layoutX="22.0" layoutY="83.0" text="Owner" textFill="#4a64cd">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font></Label>
+            <Label layoutX="23.0" layoutY="141.0" text="Status" textFill="#4a64cd">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font></Label>
+            <TextField fx:id="taskField" layoutX="31.0" layoutY="49.0" />
+            <TextField fx:id="ownerField" layoutX="31.0" layoutY="108.0" />
+            <TextField fx:id="statusField" layoutX="31.0" layoutY="161.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="220.0" layoutY="304.0" prefHeight="60.0" prefWidth="367.0">
+         <children>
+            <Button fx:id="addButton" layoutX="56.0" layoutY="17.0" mnemonicParsing="false" onAction="#addTask" text="Add" />
+            <Button fx:id="editButton" layoutX="157.0" layoutY="17.0" mnemonicParsing="false" onAction="#editTask" text="Edit" />
+            <Button fx:id="deleteButton" layoutX="248.0" layoutY="17.0" mnemonicParsing="false" onAction="#deleteTask" text="Delete" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="cleanButton" layoutX="90.0" layoutY="291.0" mnemonicParsing="false" onAction="#cleanForm" text="Clean" textOverrun="CLIP" />
+   </children>
+</AnchorPane>
